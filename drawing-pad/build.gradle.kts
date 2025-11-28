@@ -7,12 +7,9 @@ plugins {
 }
 
 kotlin {
-    sourceSets.all {
-        languageSettings.optIn("org.jetbrains.compose.resources.ExperimentalResourceApi")
-    }
 
     androidLibrary {
-        namespace = "com.wiswm.nav.drawing_pad"
+        namespace = "com.wiswm.drawing_pad"
         compileSdk = 36
         minSdk = 24
 
@@ -50,15 +47,8 @@ kotlin {
         commonMain {
             dependencies {
                 implementation(drawingPadLibs.kotlin.stdlib)
-                // Add KMP dependencies here
-                implementation(compose.runtime)
-                implementation(compose.foundation)
                 implementation(compose.material3)
-                implementation(compose.ui)
                 implementation(compose.components.resources)
-                implementation(compose.components.uiToolingPreview)
-                implementation(drawingPadLibs.androidx.lifecycle.viewmodelCompose)
-                implementation(drawingPadLibs.androidx.lifecycle.runtimeCompose)
             }
         }
 
@@ -70,7 +60,6 @@ kotlin {
 
         androidMain {
             dependencies {
-                implementation(compose.preview)
                 implementation(drawingPadLibs.androidx.activity.compose)
             }
         }

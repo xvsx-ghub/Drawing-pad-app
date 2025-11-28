@@ -48,11 +48,11 @@ kotlin {
 }
 
 android {
-    namespace = "com.wiswm.nav.drawingpadapp"
+    namespace = "com.wiswm.drawingpadapp"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = "com.wiswm.nav.drawingpadapp"
+        applicationId = "com.wiswm.drawingpadapp"
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1
